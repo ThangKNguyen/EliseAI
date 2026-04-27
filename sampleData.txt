@@ -1,0 +1,5 @@
+first_name,last_name,email,company,property_address,city,state
+Jennifer,Walsh,j.walsh@essexpropertytrust.com,Essex Property Trust,1100 Park Place,San Jose,CA
+Marcus,Thompson,m.thompson@nrpgroup.com,NRP Group,1400 Superior Ave,Cleveland,OH
+Rachel,Patel,r.patel@greystar.com,Greystar Real Estate Partners,465 Meeting St,Charleston,SC
+Derek,Morrison,d.morrison@bozzuto.com,Bozzuto Group,6406 Ivy Lane,Greenbelt,MD
