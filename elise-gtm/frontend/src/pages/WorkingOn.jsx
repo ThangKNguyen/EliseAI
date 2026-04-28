@@ -101,7 +101,9 @@ export default function WorkingOn() {
                   </div>
 
                   <div className="lead-card-footer" onClick={e => e.stopPropagation()}>
-                    <span style={{ fontSize: 12, color: 'var(--text-3)' }}>{lead.email}</span>
+                    <span style={{ fontSize: 12, color: 'var(--text-3)' }}>
+                      {lead.assigned_user_name ? `SDR: ${lead.assigned_user_name}` : 'Unassigned'}
+                    </span>
                     <div style={{ display: 'flex', gap: 6 }}>
                       <button className="delete-btn" onClick={() => setDeleteId(lead.id)} title="Delete lead">
                         <svg viewBox="0 0 16 16" fill="currentColor" style={{ width: 13, height: 13 }}>

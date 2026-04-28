@@ -72,6 +72,7 @@ export default function Completed() {
                     <th>Location</th>
                     <th>Score</th>
                     <th>Priority</th>
+                    <th>SDR</th>
                     <th>Completed</th>
                     <th></th>
                   </tr>
@@ -91,6 +92,7 @@ export default function Completed() {
                         }
                       </td>
                       <td><ScoreBadge score={lead.score} /></td>
+                      <td style={{ color: 'var(--text-2)', fontSize: 13 }}>{lead.assigned_user_name ?? '—'}</td>
                       <td style={{ color: 'var(--text-2)', fontSize: 13 }}>{fmtDate(lead.updated_at)}</td>
                       <td onClick={e => e.stopPropagation()}>
                         <button className="delete-btn" onClick={() => setDeleteId(lead.id)} title="Delete lead">

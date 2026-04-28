@@ -4,9 +4,11 @@ from typing import Optional, List
 from uuid import UUID
 from database import get_db
 from models.lead import Lead, LeadEnrichment, LeadStatus
+from models.user import User
 from schemas import LeadCreate, LeadOut, LeadDetailOut, LeadStatusUpdate, LeadEmailUpdate, PipelineResponse
 from services.pipeline import run_pipeline as _run_pipeline, enrich_lead
 from services.gemini_service import generate_ai_summary
+from routers.auth import get_current_user
 
 router = APIRouter()
 
@@ -56,11 +58,12 @@ def update_status(lead_id: UUID, payload: LeadStatusUpdate, db: Session = Depend
 
 
 @router.patch("/{lead_id}/assign", response_model=LeadOut)
-def assign_lead(lead_id: UUID, db: Session = Depends(get_db)):
+def assign_lead(lead_id: UUID, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     lead = db.query(Lead).filter(Lead.id == lead_id).first()
     if not lead:
         raise HTTPException(status_code=404, detail="Lead not found")
     lead.status = LeadStatus.in_progress
+    lead.assigned_to = current_user.id
     db.commit()
     db.refresh(lead)
     return lead

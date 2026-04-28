@@ -128,19 +128,6 @@ export default function Dashboard() {
     }
   }
 
-  async function handleAnalyzeSingle(id) {
-    setAnalyzingId(id);
-    try {
-      const { data } = await client.post(`/leads/${id}/analyze`);
-      setLeads(prev => prev.map(l => l.id === id ? data : l));
-      setToast('Lead analyzed successfully!');
-    } catch {
-      setToast('Analysis failed. Check server logs.');
-    } finally {
-      setAnalyzingId(null);
-    }
-  }
-
   function parseCSV(text) {
     const lines = text.trim().split('\n').map(l => l.trim()).filter(Boolean);
     if (lines.length < 2) return [];

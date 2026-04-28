@@ -34,6 +34,12 @@ class Lead(Base):
     assigned_user = relationship("User", back_populates="leads", foreign_keys=[assigned_to])
     enrichment = relationship("LeadEnrichment", back_populates="lead", uselist=False)
 
+    @property
+    def assigned_user_name(self):
+        if self.assigned_user:
+            return f"{self.assigned_user.first_name} {self.assigned_user.last_name}"
+        return None
+
 
 class LeadEnrichment(Base):
     __tablename__ = "lead_enrichments"

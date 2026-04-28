@@ -54,6 +54,7 @@ class LeadOut(BaseModel):
     state: str
     status: LeadStatus
     assigned_to: Optional[UUID]
+    assigned_user_name: Optional[str]
     score: Optional[int]
     created_at: datetime
     updated_at: datetime
