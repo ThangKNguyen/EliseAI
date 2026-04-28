@@ -7,6 +7,7 @@ A full-stack tool that automates the inbound lead process for sales teams. Paste
 **Demo video**: https://www.youtube.com/watch?v=PVk8olu4dtQ
 
 **Project Plan**: https://docs.google.com/document/d/11IDMz2ijoi90tgvNWJ6cEvrToZJGROP5fus4xL8mW3Y/edit?usp=sharing
+
 **Presentation Slides**: https://docs.google.com/presentation/d/1BYnk59MUmmtOzam41e9zDzLuHWJ73Jfg_A3bCXrxz18/edit?usp=sharing
 
 Presentation Slides
