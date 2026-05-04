@@ -19,6 +19,6 @@ app.include_router(auth.router, prefix="/auth", tags=["auth"])
 app.include_router(leads.router, prefix="/leads", tags=["leads"])
 
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 def health():
     return {"status": "ok"}
