@@ -395,13 +395,13 @@ export default function LeadDetail() {
                     </div>
                   )}
                   {companyNews.length > 0 && companyNews.map((n, i) => (
-                    <div className="signal-item" key={i}>
+                    <a className="signal-item" key={i} href={n.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'flex', alignItems: 'flex-start', gap: 10 }}>
                       <span className="signal-icon">📰</span>
                       <div>
-                        <div className="signal-title">{n.title}</div>
+                        <div className="signal-title" style={{ color: n.url ? 'var(--accent-mid)' : 'inherit' }}>{n.title}</div>
                         <div className="signal-sub">{n.source} · {n.publishedAt?.slice(0, 10)}</div>
                       </div>
-                    </div>
+                    </a>
                   ))}
                   {!e.company_summary && !companyNews.length && (
                     <p style={{ color: 'var(--text-3)', fontSize: 13 }}>No company signals found.</p>
@@ -482,10 +482,10 @@ export default function LeadDetail() {
                   <div className="card-body">
                     <div className="news-list">
                       {cityNews.map((n, i) => (
-                        <div className="news-item" key={i}>
+                        <a className="news-item" key={i} href={n.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'block' }}>
                           <div className="news-source">{n.source}</div>
-                          <div className="news-headline">{n.title}</div>
-                        </div>
+                          <div className="news-headline" style={{ color: n.url ? 'var(--accent-mid)' : 'inherit' }}>{n.title}</div>
+                        </a>
                       ))}
                       {e.market_news && cityNews.length === 0 && (
                         <div className="news-item">
