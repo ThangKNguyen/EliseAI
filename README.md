@@ -1,5 +1,7 @@
 # EliseAI GTM Lead Enrichment Platform
 
+**Live demo**: https://elise-ai-jade.vercel.app/ — use `test@test.com` / `password123` to log in.
+
 A full-stack tool that automates the inbound lead process for sales teams. Paste in a lead's basic contact info, and the platform automatically enriches it with real market data, scores it, and generates personalized outreach — replacing 20–30 minutes of manual SDR research with a single click. In this demo, it is a **shared** dashboard between all SDRs. Each SDR can see who is working on which lead.
 
 **Presentation video**: https://www.youtube.com/watch?v=rPMZCpOIqjo

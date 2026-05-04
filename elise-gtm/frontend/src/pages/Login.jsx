@@ -41,6 +41,15 @@ export default function Login() {
         <h1 className="auth-title">Welcome back</h1>
         <p className="auth-subtitle">Sign in to your account to continue</p>
 
+        <div
+          style={{ background: 'var(--surface-2)', border: '1px solid var(--border)', borderRadius: 8, padding: '10px 14px', marginBottom: 20, cursor: 'pointer' }}
+          onClick={() => { set('email', 'test@test.com'); set('password', 'password123'); }}
+          title="Click to autofill"
+        >
+          <p style={{ fontSize: 12, color: 'var(--text-3)', marginBottom: 4 }}>Demo credentials <span style={{ color: 'var(--accent-mid)' }}>· click to autofill</span></p>
+          <p style={{ fontSize: 13, color: 'var(--text-2)', margin: 0 }}>test@test.com · password123</p>
+        </div>
+
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Email address</label>
