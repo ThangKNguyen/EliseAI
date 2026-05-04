@@ -4,6 +4,8 @@
 
 A full-stack tool that automates the inbound lead process for sales teams. Paste in a lead's basic contact info, and the platform automatically enriches it with real market data, scores it, and generates personalized outreach — replacing 20–30 minutes of manual SDR research with a single click. In this demo, it is a **shared** dashboard between all SDRs. Each SDR can see who is working on which lead.
 
+> **Note on API limits:** All data sources used in this project are free-tier APIs (NewsAPI, Tavily, Gemini, Census, FRED, HUD, etc.). If the enrichment pipeline returns incomplete data or AI generation fails during testing, it is likely due to rate limits or daily quotas being exhausted — not a code failure. In that case, please refer to the prerecorded demo video below.
+
 **Presentation video**: https://www.youtube.com/watch?v=rPMZCpOIqjo
 
 **Demo video**: https://www.youtube.com/watch?v=PVk8olu4dtQ
