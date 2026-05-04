@@ -395,13 +395,13 @@ export default function LeadDetail() {
                     </div>
                   )}
                   {companyNews.length > 0 && companyNews.map((n, i) => (
-                    <a className="signal-item" key={i} href={n.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+                    <div className="signal-item" key={i}>
                       <span className="signal-icon">📰</span>
                       <div>
-                        <div className="signal-title" style={{ color: n.url ? 'var(--accent-mid)' : 'inherit' }}>{n.title}</div>
+                        <div className="signal-title">{n.title}</div>
                         <div className="signal-sub">{n.source} · {n.publishedAt?.slice(0, 10)}</div>
                       </div>
-                    </a>
+                    </div>
                   ))}
                   {!e.company_summary && !companyNews.length && (
                     <p style={{ color: 'var(--text-3)', fontSize: 13 }}>No company signals found.</p>
