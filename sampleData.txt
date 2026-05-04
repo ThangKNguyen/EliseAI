@@ -3,3 +3,5 @@ Jennifer,Walsh,j.walsh@essexpropertytrust.com,Essex Property Trust,1100 Park Pla
 Marcus,Thompson,m.thompson@nrpgroup.com,NRP Group,1400 Superior Ave,Cleveland,OH
 Rachel,Patel,r.patel@greystar.com,Greystar Real Estate Partners,465 Meeting St,Charleston,SC
 Derek,Morrison,d.morrison@bozzuto.com,Bozzuto Group,6406 Ivy Lane,Greenbelt,MD
+Amanda,Chen,a.chen@equityapartments.com,Equity Residential,2 North Riverside Plaza,Chicago,IL
+James,Rivera,j.rivera@camden.com,Camden Property Trust,3 Greenway Plaza,Houston,TX
